@@ -33,3 +33,21 @@ Done. Now run:
   npm run dev
 
   ```
+
+  ```
+        You’ve successfully created a project with
+      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
+      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
+      What's next?
+      ```
+
+
+      ```
+          <img
+      alt="Vue logo"
+      class="logo"
+      src="@/assets/logo.svg"
+      width="125"
+      height="125"
+    />
+    ```
