@@ -1,0 +1,49 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="area">
+      <h2 data-cy="areaDetailsHeading"><span>Area</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span>ID</span></dt>
+        <dd>
+          <span>{{ area.id }}</span>
+        </dd>
+        <dt><span>Title</span></dt>
+        <dd>
+          <span>{{ area.title }}</span>
+        </dd>
+        <dt><span>Description</span></dt>
+        <dd>
+          <span>{{ area.description }}</span>
+        </dd>
+        <dt><span>Task</span></dt>
+        <dd>
+          <span *ngFor="let task of area.tasks; let last = last">
+            <a [routerLink]="['/task', task.id, 'view']">{{ task.title }}</a
+            >{{ last ? '' : ', ' }}
+          </span>
+        </dd>
+        <dt><span>Scientist</span></dt>
+        <dd>
+          <div *ngIf="area.scientist">
+            <a [routerLink]="['/scientist', area.scientist.id, 'view']">{{ area.scientist.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/area', area.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
