@@ -73,6 +73,112 @@ Generating 2,048 bit RSA key pair and self-signed certificate (SHA256withRSA) wi
 KeyStore '/Users/coder/repos/arunabhdas/githubrepos/DataScienceStack/data-science-stack/src/main/resources/config/tls//keystore.p12' generated successfully.
 ```
 
+## JDL
+Initial JDL
+
+```
+
+entity Region {
+	regionName String
+}
+
+entity Country {
+	countryName String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Location {
+	streetAddress String,
+	postalCode String,
+	city String,
+	stateProvince String
+}
+
+entity Department {
+	departmentName String required
+}
+
+/**
+ * Task entity.
+ */
+entity Task {
+	title String,
+	description String
+}
+
+/**
+ * The Scientist entity.
+ */
+entity Scientist {
+	/**
+	* The firstname attribute.
+	*/
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	startDate Instant,
+	salary Long,
+	percentage Long
+}
+
+entity Area {
+	title String,
+	description String
+}
+
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+relationship OneToOne {
+	Country{region} to Region
+}
+
+relationship OneToOne {
+	Location{country} to Country
+}
+
+relationship OneToOne {
+	Department{location} to Location
+}
+
+relationship ManyToMany {
+	Area{task(title)} to Task{area}
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Scientist to Area{scientist},
+	/**
+	* A relationship
+	*/
+	Department to
+	/**
+	* Another side of the same relationship
+	*/
+	Scientist{department}
+}
+
+
+// Set pagination options
+paginate Scientist with infinite-scroll
+paginate Area with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except Scientist, Area
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
+```
+
 ## Troubleshooting
 Change npm.version to 3.10.8 in pom.xml
 https://github.com/thingsboard/thingsboard/issues/1335
+
+
