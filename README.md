@@ -177,6 +177,13 @@ service all with serviceImpl except Scientist, Area
 // angularSuffix * with mySuffix
 ```
 
+## Debug develop
+
+* Debug develop using
+```
+==> ./gradlew
+```
+
 ## Troubleshooting
 Change npm.version to 3.10.8 in pom.xml
 https://github.com/thingsboard/thingsboard/issues/1335
