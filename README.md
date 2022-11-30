@@ -18,3 +18,7 @@ openjdk 17.0.5 2022-10-18
 OpenJDK Runtime Environment Temurin-17.0.5+8 (build 17.0.5+8)
 OpenJDK 64-Bit Server VM Temurin-17.0.5+8 (build 17.0.5+8, mixed mode)
 ```
+
+## Troubleshooting
+Change npm.version to 3.10.8 in pom.xml
+https://github.com/thingsboard/thingsboard/issues/1335
