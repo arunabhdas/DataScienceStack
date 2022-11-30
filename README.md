@@ -26,7 +26,7 @@ OpenJDK 64-Bit Server VM Temurin-17.0.5+8 (build 17.0.5+8, mixed mode)
 ```
 ==> jhipster
 INFO! Using bundled JHipster
-(node:21547) [DEP0148] DeprecationWarning: Use of deprecated folder mapping "./lib/util/" in the "exports" field module resolution of the package at /opt/homebrew/lib/node_modules/generator-jhipster/node_modules/yeoman-environment/package.json.
+(node:35430) [DEP0148] DeprecationWarning: Use of deprecated folder mapping "./lib/util/" in the "exports" field module resolution of the package at /opt/homebrew/lib/node_modules/generator-jhipster/node_modules/yeoman-environment/package.json.
 Update this package.json to use a subpath pattern like "./lib/util/*".
 (Use `node --trace-deprecation ...` to show where the warning was created)
 
@@ -55,20 +55,19 @@ Application files will be generated in folder: /Users/coder/repos/arunabhdas/git
 ? Which *production* database would you like to use? PostgreSQL
 ? Which *development* database would you like to use? H2 with disk-based persistence
 ? Which cache do you want to use? (Spring cache abstraction) No cache - Warning, when using an SQL database, this will disable the Hibernate 2nd level cache!
-
 ? Would you like to use Maven or Gradle for building the backend? Gradle
 ? Do you want to use the JHipster Registry to configure, monitor and scale your application? No
 ? Which other technologies would you like to use? API first development using OpenAPI-generator
-? Which *Framework* would you like to use for the client? Angular
+? Which *Framework* would you like to use for the client? React
 ? Do you want to generate the admin UI? Yes
-? Would you like to use a Bootswatch theme (https://bootswatch.com/)? Cyborg
-? Choose a Bootswatch variant navbar theme (https://bootswatch.com/)? Dark
+? Would you like to use a Bootswatch theme (https://bootswatch.com/)? Cosmo
+? Choose a Bootswatch variant navbar theme (https://bootswatch.com/)? Light
 ? Would you like to enable internationalization support? No
 ? Please choose the native language of the application English
 ? Besides JUnit and Jest, which testing frameworks would you like to use? 
 ? Would you like to install other generators from the JHipster Marketplace? No
 Generating 2,048 bit RSA key pair and self-signed certificate (SHA256withRSA) with a validity of 99,999 days
-	for: CN=Java Hipster, OU=Development, O=com.arunabhdas.datasciencestack, L=, ST=, C=
+        for: CN=Java Hipster, OU=Development, O=com.arunabhdas.datasciencestack, L=, ST=, C=
 
 KeyStore '/Users/coder/repos/arunabhdas/githubrepos/DataScienceStack/data-science-stack/src/main/resources/config/tls//keystore.p12' generated successfully.
 ```
