@@ -11,3 +11,7 @@ npm install
 npm run lint
 npm run dev
 ```
+
+## Screenshots
+
+![Screenshot 1](https://raw.githubusercontent.com/arunabhdas/DataScienceStack/main/screenshots/data_science_stack_1.png)
