@@ -8,12 +8,13 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 
     <div class="wrapper">
-      <HelloWorld msg="Data Science Stack" msg2="The Place for Data Science Machine Learning" />
+      <HelloWorld msg="Data Science Stack" msg2="The Platform for Data Science and Machine Learning" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/contact">Contact</RouterLink>
+        <RouterLink to="/supervised">Supervised</RouterLink>
+        <RouterLink to="/unsupervised">Unsupervised</RouterLink>
+        <RouterLink to="/reinforcement">Reinforcement</RouterLink>
 
       </nav>
     </div>
